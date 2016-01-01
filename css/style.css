@@ -1,30 +1,38 @@
 body{
-	height: 100%;
+	height: 100vh;
 }
 
-header{
+.test{
 	display: flex;
-	height: 70%;
-	width: 100%;
 	justify-content: flex-start;
 	align-items: center;
 	flex-direction: column;
+	width: 100%;
 }
 
-background{
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 70%;
-	width: 100%;	
-	z-index: -1;
+#header{
 	background-image: url(../img/header.jpg);
 	background-size: cover;	
 	-webkit-filter: grayscale(0.8) contrast(0.8);
 	filter: grayscale(0.8) contrast(0.8);
+	height: 70vh;
 }
 
-header > p{
+.pre-background{
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;	
+	z-index: 1;
+	width: 100%;
+	height: 100vh;
+	background-color: black;
+    -webkit-animation-duration: 3.5s;
+    animation-duration: 3.5s;
+}
+
+.test > p{
 	margin-top: 30px;
 	align-self: center;
 	font-size: 30pt;
@@ -35,12 +43,79 @@ header > p{
 }
 
 #result{
-	min-height: 30%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	min-height: 30vh;
+	border-top: 2px solid #313131;
 	text-align: center;
 	font-family: 'PTSerif-Regular';
 	text-shadow: 3px 3px #000;	
 	background-color: #363636;
 	color: white;
+}
+
+.dragon{
+	-webkit-filter: grayscale(0.8) contrast(0.8);
+	filter: grayscale(0.8) contrast(0.8);
+	align-self: flex-start;	
+	position: absolute;
+	top: 0;
+	z-index: 2;
+	left: -330px;
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s;
+}
+
+.knight{
+	-webkit-filter: grayscale(0.8) contrast(0.8);
+	filter: grayscale(0.8) contrast(0.8);
+	align-self: flex-start;	
+	position: absolute;
+	top: 0;
+	z-index: 2;
+	right: -320px;
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    display: initial;
+  }
+
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1;
+    display: initial;
+  }
+
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+
+.fadeOut {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
+}
+
+input[type="submit"]{
+	z-index: 3;
+	align-self: center;
+	/*color: #20A509;*/
+	/*border: 1px solid #3FA52C;*/
 }
 
 footer{
