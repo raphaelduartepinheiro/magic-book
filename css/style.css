@@ -1,5 +1,6 @@
 body{
 	height: 100vh;
+	overflow: hidden;
 }
 
 .test{
@@ -62,7 +63,7 @@ body{
 	align-self: flex-start;	
 	position: absolute;
 	top: 0;
-	z-index: 2;
+	z-index: 1;
 	left: -330px;
     -webkit-animation-duration: 3s;
     animation-duration: 3s;
@@ -74,7 +75,7 @@ body{
 	align-self: flex-start;	
 	position: absolute;
 	top: 0;
-	z-index: 2;
+	z-index: 1;
 	right: -320px;
     -webkit-animation-duration: 3s;
     animation-duration: 3s;
@@ -112,10 +113,8 @@ body{
 }
 
 input[type="submit"]{
-	z-index: 3;
+	z-index: 2;
 	align-self: center;
-	/*color: #20A509;*/
-	/*border: 1px solid #3FA52C;*/
 }
 
 footer{
